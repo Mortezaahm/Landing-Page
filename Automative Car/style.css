@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+header {
+  background-image: url("car-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  min-height: calc(100vh - 100px);
+}
+
+.content {
+  font-size: 1.7rem;
+  margin: auto;
+}
+
+.content h1 {
+  color: #00c2ff;
+  margin-bottom: 0;
+}
+
+.container {
+  padding: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 2.5rem;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+nav li a.selected {
+  font-weight: bold;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.highlight {
+  padding: 1rem;
+  background-color: #00c2ff;
+  color: white;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.highlight:hover {
+  background-color: #0095cc;
+  box-shadow: 0 6px 12px rgba(196, 129, 129, 0.3);
+  transform: translateY(-2px);
+}
+
+.content {
+  margin: auto;
+  max-width: 100%;
+}
+
+footer {
+  height: 100px;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+footer strong {
+  color: #00c2ff;
+}
+
+footer p {
+  color: white;
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .content {
+    font-size: 1.2rem;
+  }
+
+  nav li:not(:last-child) {
+    margin: 0.5rem;
+  }
+
+  nav .highlight {
+    display: none;
+  }
+
+  footer {
+    height: auto;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+}
