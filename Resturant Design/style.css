@@ -13,12 +13,13 @@ header {
   background-image: url("bg.png");
   background-size: cover;
   min-height: 100vh;
+  background-position: center center;
 }
-
+/* 
 h1 {
-  font-variant: small-caps; /*Caps Lock*/
-  font-size: 4rem; /*relative */
-}
+  font-variant: small-caps; ==> Caps Lock
+  font-size: 4rem; 
+} */
 
 /*font is a short hand for font-size, font-family, font-weight, font-style, and line-height
 ==> font : italic bold small-caps 2rem/1.5 Arial, sans-serif
@@ -39,6 +40,10 @@ web-type-snippt ===> @font-face {
   max-width: 100%;
 }
 
+nav {
+  padding: 0.5rem 0;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -49,9 +54,119 @@ a {
   justify-content: space-between;
   padding: 1rem 0;
   font-size: 1.5rem;
+  align-items: center;
 }
 
 .logo {
   color: #026e78;
   font-weight: bold;
+  font-size: 2.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  flex: 1;
+}
+
+nav li a {
+  background-color: #2099a4;
+  padding: 1rem 2rem;
+  display: block;
+  text-align: center;
+}
+
+nav a.active {
+  background-color: #fff;
+  color: #026e78;
+  font-weight: bold;
+}
+
+nav a.highlight {
+  background-color: #026e78;
+  color: #fff;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 2rem;
+  margin-top: 5rem;
+}
+
+.content h1 {
+  background-color: #026e78;
+  color: white;
+  display: inline-block;
+  padding: 1rem;
+  font-weight: 200;
+}
+
+.white-link {
+  color: white;
+  background-color: #2099a4;
+  padding: 1rem;
+  border-radius: 25px;
+}
+
+.white-link:hover {
+  opacity: 0.8;
+  background-color: #0095cc;
+  box-shadow: 0 6px 12px rgba(36, 26, 168, 0.5);
+  transform: translateY(-2px);
+}
+
+.teal-link {
+  background-color: white;
+  color: #026e78;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 25px;
+}
+
+.teal-link:hover {
+  color: white;
+  opacity: 0.8;
+  background-color: #0095cc;
+  box-shadow: 0 6px 12px rgba(36, 26, 168, 0.5);
+  transform: translateY(-2px);
+}
+
+.content a:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    font-size: 1.5rem;
+  }
+
+  .pre-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav li {
+    flex: none;
+    width: 100%;
+  }
+
+  nav li a {
+    padding: 0.5rem;
+  }
 }
